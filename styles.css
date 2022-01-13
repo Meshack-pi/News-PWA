@@ -3,6 +3,7 @@ body {
   margin: 16px;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI';
+  background-color: #E1F277;
 }
 
 header {
@@ -30,4 +31,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: max-content;
   grid-auto-flow: row dense;
+}
+h1{
+        margin: auto;
 }

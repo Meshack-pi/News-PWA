@@ -1,5 +1,7 @@
 import './news-article.js';
 import { topHeadlinesUrl } from './newsApi.js';
+import { applenews } from './newsApi.js';
+import { business } from './newsApi.js'
 
 window.addEventListener('load', () => {
   getNews();
@@ -7,12 +9,29 @@ window.addEventListener('load', () => {
 });
 
 async function getNews() {
-  const res = await fetch(topHeadlinesUrl);
-  const json = await res.json();
-
+  const trending = await fetch(topHeadlinesUrl);
+  const trendingj = await trending.json();
+  const apple = await fetch(applenews);
+  const applej = await apple.json();
+  const businessNews = await fetch(business);
+  const businessNewsj = await businessNews.json();
+  
   const main = document.querySelector('main');
+  
+  businessNewsj.articles.forEach(article =>{
+          const el3 = document.createElement('news-article');
+          el3.article = article;
+          main.appendChild(el3);
+  });
+  
+  applej.articles.forEach(article =>{
+        const el2 = document.createElement('news-article');
+        el2.article = article;
+        main.appendChild(el2);
+  });
+  
 
-  json.articles.forEach(article => {
+  trendingj.articles.forEach(article => {
     const el = document.createElement('news-article');
     el.article = article;
     main.appendChild(el);
