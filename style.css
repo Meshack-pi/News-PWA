@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+body {
+    margin: 0;
+}
+#description{
+        height: 400px;
+        width:400px;
+        border-radius: 10%;
+        background-color: #70FF69D1;
+        margin-left: 15px;
+        position: relative;
+}
+h1{
+        text-align: center;
+        font-family: 'Nunito';
+}
+#info{
+        margin-top: 20px;
+        position: absolute;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-family: 'Nunito';
+}
+#intro-to-mara{
+        width: 400px;
+        height: 400px;
+        background-color: #5ADADFCC;
+        float: right;
+        border-radius: 10%;
+       margin-right: 20px;
+}
